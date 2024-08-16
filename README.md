@@ -130,7 +130,7 @@ Things to take note for KONE API v2.0:
 2. Liftstate websocket will be closed by KONE Server if it has been opened for more than 300s (5 minutes). That's why koneNode reopens the liftstate websocket for every 300s.
 3. Liftstate websocket will be closed by KONE Server if inactive for 60s (1 minute). That's why koneNode reopens the liftstate websocket if it is inactive for more than 60s.
 
-## Useful links:
+## Useful Links:
 1. Robotics Middleware Framework (RMF): https://github.com/open-rmf/rmf
 2. KONE API v2.0: https://dev.kone.com/api-portal/dashboard/api-documentation/elevator-websocket-api-v2
 
@@ -146,9 +146,9 @@ Things to take note for KONE API v2.0:
    [scope]: <https://dev.kone.com/api-portal/dashboard/developer-guide/overview-api#scopes>
    [door holding time]: <https://dev.kone.com/api-portal/dashboard/api-documentation/elevator-websocket-api-v2/robots#hold-car-door-open>
    [authentication request]: <https://dev.kone.com/api-portal/dashboard/api-documentation/elevator-websocket-api-v2/robots#authentication>
-   [koneAdapter_v2.py]: <https://github.com/sharp-rmf/kone-ros-api/blob/main/kone_ros_api/koneAdaptor_v2.py>
-   [koneNode_v2.py]: <https://github.com/sharp-rmf/kone-ros-api/blob/main/kone_ros_api/koneNode_v2.py>
-   [env.yaml]: <https://github.com/sharp-rmf/kone-ros-api/blob/main/config/env.yaml>
+   [koneAdapter_v2.py]: <https://github.com/chart-sg/lift_kone_adapter/blob/main/kone_ros_api/koneAdaptor_v2.py>
+   [koneNode_v2.py]: <https://github.com/chart-sg/lift_kone_adapter/blob/main/kone_ros_api/koneNode_v2.py>
+   [env.yaml]: <https://github.com/chart-sg/lift_kone_adapter/blob/main/config/env.yaml>
    [The Galen]: <https://www.capitaland.com/en/find-a-property/global-property-listing/businesspark-industrial-logistics/the-galen.html>
    [/lift_requests]: <https://github.com/open-rmf/rmf_internal_msgs/blob/main/rmf_lift_msgs/msg/LiftRequest.msg>
    [/lift_states]: <https://github.com/open-rmf/rmf_internal_msgs/blob/main/rmf_lift_msgs/msg/LiftState.msg>
