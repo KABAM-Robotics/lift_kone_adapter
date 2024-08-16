@@ -40,7 +40,7 @@ This package has been tested to be working on:
 ## Installation
 ```
 mkdir -p kone_ros_api_ws/src
-git clone https://github.com/chart-sg/lift_kone_adapter.git
+git clone https://github.com/chart-sg/lift_kone_adapter.git --branch main --single-branch --depth 1
 cd ..
 source YOUR_RMF_Lift_MSG_WORKSPACE (eg. source ~/rmf_ws/install/setup.bash)
 colcon build
