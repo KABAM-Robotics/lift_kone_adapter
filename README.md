@@ -46,11 +46,28 @@ source YOUR_RMF_Lift_MSG_WORKSPACE (eg. source ~/rmf_ws/install/setup.bash)
 colcon build
 ```
 ## Dockerfile
-To quickly start running your own Kone RMF Lift Adapter with the Kone v2 API. Simply copy the docker file out, build it, and run it with the correct env.yaml file (which contains the secrets).
+Follow the instructions below to quickly start running your own Kone RMF Lift Adapter with the Kone v2 API.
+
+Download this repository, build it, and run it with the correct `env.yaml` file (which contains the secrets).
+
 > If you get a <code>KeyError: 'access_token'</code> error, please check that your env.yaml's <code>access_id/access_secret</code> is correct.
+
+```bash
+git clone https://github.com/chart-sg/lift_kone_adapter.git --branch main --single-branch --depth 1 && cd lift_kone_adapter
 ```
-docker build -f src/kone-ros-api/Dockerfile -t kone --build-arg GIT_VER=6e75d1c18d1132bf8bacd51b1fee29ee9b2dab42 . # To checkout git commit 6e75d1
-docker run -it --network host --mount type=bind,source=$PWD/src/kone-ros-api/config/env.yaml,destination=/opt/rmf/install/kone_ros_api/share/kone_ros_api/config/env.yaml kone:latest /bin/bash
+
+```bash
+docker build -t lift_kone_adapter .
+```
+
+```bash
+docker run -it --rm \
+    --name lift_adapter_kone_c \
+    --network host \
+    -v /dev/shm:/dev/shm \
+    -v ./config/env.yaml:/opt/rmf/install/kone_ros_api/share/kone_ros_api/config/env.yaml \
+    lift_adapter_kone:latest /bin/bash -c \
+    "source install/setup.bash && ros2 run kone_ros_api koneNode_v2"
 ```
 
 ## Fill up the config/env.yaml before you run this package
