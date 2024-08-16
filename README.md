@@ -34,8 +34,8 @@ The following are packages/messages required by the adapter:
 - Python module: threading, requests, websocket, json
 
 This package has been tested to be working on:
-- Ubuntu 20.04
-- [ROS2 Galactic]
+- Ubuntu `22.04`
+- [ROS2 Humble]
 
 ## Installation
 ```
